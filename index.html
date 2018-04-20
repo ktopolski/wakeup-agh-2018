@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Wake Up! AGH 2018</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/league.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,211 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					### Ruby on Rails: szansa na sukces?
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Agenda</h3>
+						<p class="fragment">1. Dlaczego warto wybrać Ruby?</p>
+						<p class="fragment">2. Krótki wstęp do Ruby</p>
+						<p class="fragment">3. Ruby on Rails - fakty i mity</p>
+					</section>
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>$> whoami</h3>
+						<p class="fragment">Ruby developer od 4 lat</p>
+						<p class="fragment">Senior RoR developer @ Railwaymen</p>
+						<p class="fragment">Uczestnik KRUG(Kraków Ruby User Group)</p>
+						<p class="fragment">Prelegent AGH: KrakYourNet 2016</p>
+						<p class="fragment">TechLeaders #3 Mentor</p>
+					</section>
+				</section>
+				<section data-markdown>
+					### Dlaczego warto wybrać Ruby?
+				</section>
+				<section>
+					<h3>Trendy StackOverflow</h3>
+					<img src="images/stack_overflow_stats.png" style="margin: 0; border-width: 2px;" />
+				</section>
+				<section>
+					<h3>TIOBE index: najpopularniejsze wyszukiwania</h3>
+					<img src="images/tiobe_index.png" style="margin: 0; border-width: 2px;" />
+				</section>
+				<section>
+					<h3>GitHub 2017: Liczba otworzonych Pull Requestów</h3>
+					<img src="images/github_popularity_by_number_of_prs.png" style="margin: 0; border-width: 2px;" />
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Wnioski</h3>
+						<p class="fragment">1. Ruby nie jest najpopularniejszym językiem</p>
+						<p class="fragment">2. Community Ruby utrzymuje się na stałym poziomie</p>
+						<p class="fragment">3. Ekosystem Ruby jest aktywny</p>
+					</section>
+				</section>
+				<section><img src="images/show_me_money.gif" alt=""/></section>
+				<section data-markdown>
+					### Zarobki w Ruby
+				</section>
+				<section>
+					<section>
+						<h3>StackOverflow 2018: najlepiej płatne języki($/rok)</h3>
+						<img src="images/zarobki_swiat_1.png" style="margin: 0; border-width: 2px;" />
+					</section>
+					<section>
+						<img src="images/zarobki_swiat_2.png" style="margin: 0; border-width: 2px;" />
+					</section>
+					<aside class="notes">
+						100,000 ludzi
+						Worldwide 64,000$ czyli ~18,000PLN/miesiąc
+						W USA 100,000$/rok czyli ~28,000PLN/miesiąc
+					</aside>
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Rynek lokalny na podstawie nofluffjobs.com</h3>
+						<p class="fragment">7 aktywnych ogłoszeń</p>
+						<p>
+							<span class="fragment">4500PLN - </span>
+							<span class="fragment">15000PLN</span>
+						</p>
+						<p class="fragment">~9000PLN</p>
+					</section>
+				</section>
+				<section data-markdown>
+					### Krakowskie community
+				</section>
+				<section>
+					<h3>Ilość Rubistów per miasto (meetup.com)</h3>
+					<img src="images/meetup_ruby_per_miasto.png"/>
+				</section>
+				<section>
+					<h3>krug.org.pl</h3>
+					<img src="images/krug_logo.svg" alt="" style="background: white;"/>
+				</section>
+				<section data-background-image="images/krug_community.jpeg"></section>
+				<section>
+					<section id="fragments">
+						<h3>Inne inicjatywy Ruby on Rails</h3>
+						<img src="images/rails_girls.png" class="fragment" alt=""/>
+						<img src="images/wit.png" alt="" class="fragment"/>
+					</section>
+				</section>
+				<section>
+					<img src="images/i_should_learn.jpg" />
+				</section>
+				<section>
+					<h3>Krótki wstęp do Ruby</h3>
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Yukihiro "Matz" Matsumoto</h3>
+						<img src="images/matz.jpg" alt="">
+							<p class="fragment">
+								M I N A S W A N
+							</p>
+				  </section>
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Ruby: najważniejsze założenia</h3>
+						<p class="fragment">1. <b>Wszystko</b> jest obiektem</p>
+						<br/>
+
+						<blockquote class="fragment" style="text-align: left; padding: 0 15px">
+							<p class="fragment">true.class # => TrueClass</p>
+							<p class="fragment">true.methods.count # => 59</p>
+							<p class="fragment">1.class # => Integer</p>
+							<p class="fragment">1.methods.count # => 137</p>
+						</blockquote>
+					</section>
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Ruby: najważniejsze założenia</h3>
+						<p>1. <b>Wszystko</b> jest obiektem</p>
+						<p class="fragment">2. Stworzony, by <i>programiści byli szczęśliwi</i></p>
+						<br/>
+
+						<blockquote class="fragment" style="text-align: left; padding: 0 15px; width: 100%;">
+							<p class="fragment">5.times { |i| puts "Hi #{i}" } # => Hi 0 ...</p>
+							<p class="fragment">%w(ruby bo lubi).map(&:upcase).join('-') # => RUBY-BO-LUBI</p>
+							<p class="fragment">alphabet = ('a'..'z').to_a.join # => "abcdefg...</p>
+						</blockquote>
+					</section>
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Ruby: najważniejsze założenia</h3>
+						<p>1. <b>Wszystko</b> jest obiektem</p>
+						<p>2. Stworzony, by <i>programiści byli szczęśliwi</i></p>
+						<p class="fragment">3. Otwarty na zmiany(czasami aż za bardzo)</p>
+						<br/>
+
+						<blockquote class="fragment" style="text-align: left; padding: 0 15px; width: 100%;">
+							<p class="fragment">"ruby-bo-lubi".humanize # => NoMethodError</p>
+						</blockquote>
+					</section>
+					<section>
+					  <blockquote style="text-align: left; padding: 0 15px; width: 100%;">
+						  <p class="fragment">
+							  <span>class String</span><br/>
+								  <span style="margin-left: 25px;">def humanize</span><br/>
+									  <span style="margin-left: 50px;">self.tr('-', ' ').capitalize</span><br/>
+									<span style="margin-left: 25px;">end</span><br/>
+								end<br/>
+						  </p>
+						  <p class="fragment">"ruby-bo-lubi".humanize # => "Ruby bo lubi"</p>
+						</blockquote>
+					</section>
+				</section>
+				<section>
+					<h3>Ruby on Rails - fakty i mity</h3>
+				</section>
+				<section>
+					<img src="images/myth_slow_ruby.jpg" />
+				</section>
+				<section>
+				  <section id="fragments">
+						<p class="fragment">Ruby 3x3</p>
+						<p class="fragment">JRuby</p>
+						<p class="fragment">Truffle Ruby by Oracle</p>
+					</section>
+				</section>
+				<section>
+					<img src="images/myth_rails_scale.jpeg" />
+				</section>
+				<section>
+					<h3>cookpad.com</h3>
+					<section id="fragments">
+						<img class="fragment" src="images/cookpad_logo.jpg" alt="">
+						<ul>
+							<li class="fragment">50 mln użytkowników miesięcznie (@2015)</li>
+							<li class="fragment">15 000 requestów na sekundę</li>
+							<li class="fragment">300 serwerów</li>
+							<li class="fragment">30 różnych baz danych</li>
+							<li class="fragment">Czas odpowiedzi poniżej 200ms</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<img src="images/myth_dead_rails.jpeg" />
+				</section>
+				<section>
+					<section><img src="images/github-logo.jpg" alt=""></section>
+					<section><img src="images/basecamp-logo.jpg" alt=""></section>
+					<section><img src="images/airbnb-logo.jpg" alt=""></section>
+					<section><img src="images/hulu-logo.jpg" alt=""></section>
+					<section><img src="images/netflix-logo.jpg" alt=""></section>
+				</section>
+				<section><h3>Q&A</h3></section>
+				<section>
+					<p>Do zobaczenia na następnym KRUGu!</p>
+					<p>24.04 18:00 @ BAL(Ślusarska 9)</p>
+					<p style="color: #1c94e0">@_ktopolski</p>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +240,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				slideNumber: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
